@@ -1,0 +1,13 @@
+body{
+margin: 0;
+}
+
+.title{
+	color: rgb(255, 255, 255);
+	font-size: 4rem;
+	text-align: center;
+	z-index: 1;
+	position: relative;
+	bottom: -250px;
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
