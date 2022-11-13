@@ -18,7 +18,7 @@
 <body id="body">
 
 	<h1 class="title" id="title">Hi! I'm Pablo, front end developer</h1>	
-	<p>I'm passionated for design and get into the people's perspectives.</p>
+	<p>I'm a passionate for design and get into the people's perspectives</p>
 	<br>
 	<br>
 	<script type="module"> 
@@ -26,25 +26,19 @@ import * as THREE from 'three';
 
 // init
 const camera = new THREE.PerspectiveCamera( 95, window.innerWidth / window.innerHeight, 0.01, 10 );
-const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 10 );
 camera.position.z = 1;
 
 const scene = new THREE.Scene();
 
-const geometryOne = new THREE.TorusGeometry( 0.199, 0.05, 16, 100 );
-const materialOne = new THREE.MeshDepthMaterial();
-const torus = new THREE.Mesh( geometryOne, materialOne );
-scene.add( torus );
-
-const geometry = new THREE.BoxGeometry( 0.1, 0.1, 0.1 );
+const geometry = new THREE.BoxGeometry( 0.2, 0.2, 0.2 );
 const material = new THREE.MeshMatcapMaterial();
-const matcapTexture = new THREE.TextureLoader().load('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzjFpBMnkh1WTUYftvzeJRu9r7P2mB4PmQBA&usqp=CAU');
+const matcapTextureTwo = new THREE.TextureLoader().load('https://aws1.discourse-cdn.com/standard21/uploads/nomadsculpt/optimized/2X/f/f3dc59174f6cb51fc08803273f4e2f7ee5b21caa_2_1000x1000.png');
 
-material.matcap = matcapTexture;
+material.matcap = matcapTextureTwo;
+
 
 const mesh = new THREE.Mesh( geometry, material );
 scene.add( mesh );
-
 
 
 const renderer = new THREE.WebGLRenderer( { antialias: true } );
@@ -52,10 +46,12 @@ renderer.setSize( window.innerWidth, window.innerHeight );
 renderer.setAnimationLoop( animation );
 document.body.appendChild( renderer.domElement );
 
+
+
 // animation
-const geometryTwo = new THREE.TorusGeometry( 0.3, 0.07, 15, 100);
+const geometryTwo = new THREE.TorusGeometry( 0.3, 0.06, 15, 200);
 const materialOne = new THREE.MeshMatcapMaterial();
-const matcapTexture = new THREE.TextureLoader().load('https://devtalk.blender.org/uploads/default/original/1X/2c6f3c86cb1ae9108c1a344ed6d915c755bc6718.jpg');
+const matcapTexture = new THREE.TextureLoader().load('https://th.bing.com/th/id/OIP.4TjPhmJ7PZJPuFb1lho4UQHaHa?pid=ImgDet&rs=1');
 
 materialOne.matcap = matcapTexture;
 
@@ -63,14 +59,14 @@ const Torus= new THREE.Mesh( geometryTwo, materialOne);
 scene.add(Torus);
 
   mesh.position.x = -0.9;
-  Torus.position.x =-0.9;
+  Torus.position.x = -0.9;
   mesh.position.y = -0.2;
   Torus.position.y =-0.2;
-  
+
 
 const geometryThree = new THREE.SphereGeometry( 0.25, 1, 2);
 const materialThree = new THREE.MeshMatcapMaterial();
-const matcapTextureOne = new THREE.TextureLoader().load('https://devtalk.blender.org/uploads/default/original/1X/429d84b0afc4949f6d271f72dddd99b4c7f75357.jpg');
+const matcapTextureOne = new THREE.TextureLoader().load('https://th.bing.com/th/id/R.f5647222d946107c6d354cac9cfb7870?rik=%2bC0fZsNBvE50Iw&pid=ImgRaw&r=0');
 const sphere = new THREE.Mesh( geometryThree, materialThree );
 scene.add(sphere);
 materialThree.matcap = matcapTextureOne;
@@ -78,19 +74,20 @@ materialThree.matcap = matcapTextureOne;
 sphere.position.x = 0.7;
 sphere.position.y =-0.2;
 
+
+
+
 function animation(time){
 
 mesh.rotation.x = time / 3000;
 mesh.rotation.y = time / 2000;
-Torus.rotation.x = time / 1050;
-Torus.rotation.y = time / 500;
+Torus.rotation.x = time / 1550;
+Torus.rotation.y = time / 1950;
 sphere.rotation.x = time / 2250;
 sphere.rotation.y = time / 2550;
-torus.rotation.x += 0.06;
-torus.rotation.y += 0.02;
 renderer.render( scene, camera );
 }
-			
+
 renderer.setSize( window.innerWidth, window.innerHeight );
 renderer.setAnimationLoop( animation );
 document.body.appendChild( renderer.domElement );
@@ -110,6 +107,6 @@ function title() {
       }
 	title();
 	</script>
-	<script src="/src/index.js"></script>
+	<script src="src/index.js"></script>
 </body>
 </html>
