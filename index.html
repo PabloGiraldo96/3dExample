@@ -25,13 +25,25 @@
 import * as THREE from 'three';
 
 // init
+<<<<<<< HEAD
 const camera = new THREE.PerspectiveCamera( 95, window.innerWidth / window.innerHeight, 0.01, 10 );
+=======
+const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 10 );
+>>>>>>> 36f568d15c6acecf3eccdc77396ed025109661c0
 camera.position.z = 1;
 
 const scene = new THREE.Scene();
 
-const geometry = new THREE.BoxGeometry( 0.2, 0.2, 0.2 );
-const material = new THREE.MeshNormalMaterial();
+const geometryOne = new THREE.TorusGeometry( 0.199, 0.05, 16, 100 );
+const materialOne = new THREE.MeshDepthMaterial();
+const torus = new THREE.Mesh( geometryOne, materialOne );
+scene.add( torus );
+
+const geometry = new THREE.BoxGeometry( 0.1, 0.1, 0.1 );
+const material = new THREE.MeshMatcapMaterial();
+const matcapTexture = new THREE.TextureLoader().load('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzjFpBMnkh1WTUYftvzeJRu9r7P2mB4PmQBA&usqp=CAU');
+
+material.matcap = matcapTexture;
 
 const mesh = new THREE.Mesh( geometry, material );
 scene.add( mesh );
@@ -43,9 +55,8 @@ renderer.setSize( window.innerWidth, window.innerHeight );
 renderer.setAnimationLoop( animation );
 document.body.appendChild( renderer.domElement );
 
-
-
 // animation
+<<<<<<< HEAD
 const geometryTwo = new THREE.TorusGeometry( 0.3, 0.07, 15, 100);
 const materialOne = new THREE.MeshMatcapMaterial();
 const matcapTexture = new THREE.TextureLoader().load('https://devtalk.blender.org/uploads/default/original/1X/2c6f3c86cb1ae9108c1a344ed6d915c755bc6718.jpg');
@@ -64,6 +75,20 @@ scene.add(Torus);
 const geometryThree = new THREE.SphereGeometry( 0.25, 1, 2);
 const materialThree = new THREE.MeshMatcapMaterial();
 const matcapTextureOne = new THREE.TextureLoader().load('https://devtalk.blender.org/uploads/default/original/1X/429d84b0afc4949f6d271f72dddd99b4c7f75357.jpg');
+=======
+const geometryTwo = new THREE.TorusKnotGeometry( 0.17, 0.070, 100, 32 );
+const materialTwo = new THREE.MeshNormalMaterial();
+
+const Torus= new THREE.Mesh( geometryTwo, material);
+scene.add(Torus); 
+
+  mesh.position.x = -0.9;
+  Torus.position.x = 0.9;
+  torus.position.x = -0.9;
+
+const geometryThree = new THREE.SphereGeometry( 0.15, 32, 16 );
+const materialThree = new THREE.MeshNormalMaterial();
+>>>>>>> 36f568d15c6acecf3eccdc77396ed025109661c0
 const sphere = new THREE.Mesh( geometryThree, materialThree );
 scene.add(sphere);
 materialThree.matcap = matcapTextureOne;
@@ -75,13 +100,20 @@ function animation(time){
 
 mesh.rotation.x = time / 3000;
 mesh.rotation.y = time / 2000;
+<<<<<<< HEAD
 Torus.rotation.x = time / 1050;
 Torus.rotation.y = time / 500;
+=======
+Torus.rotation.x = time / 1950;
+Torus.rotation.y = time / 2050;
+>>>>>>> 36f568d15c6acecf3eccdc77396ed025109661c0
 sphere.rotation.x = time / 2250;
 sphere.rotation.y = time / 2550;
+torus.rotation.x += 0.06;
+torus.rotation.y += 0.02;
 renderer.render( scene, camera );
 }
-
+			
 renderer.setSize( window.innerWidth, window.innerHeight );
 renderer.setAnimationLoop( animation );
 document.body.appendChild( renderer.domElement );
