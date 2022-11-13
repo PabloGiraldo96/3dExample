@@ -9,11 +9,3 @@ function getRandomColor() {
     }
     return color;
 }
-
-function background() {
-          body.style.color = getRandomColor();
-		  body.style.transition = "all 0.5s ease";
-			setTimeout(background, 2500);
-      }
-
-	background();
