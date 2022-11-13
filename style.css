@@ -3,37 +3,30 @@ margin: 0;
 height: 100vh;
 display: flex;
 font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+max-width: 1200px;
 }
 
 .title{
-	color: rgb(255, 255, 255);
+	color: rgb(253, 253, 253);
 	font-size: 4rem;
 	z-index: 1;
 	position: absolute;
+	font-weight: bolder;
 	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-	left: 25rem;
+	left: 18rem;
 }
 
 
-p{
+p{	display: inline-block;
 	position: absolute;
-	top: 7rem;
-	text-align: center;
-	color: rgb(255, 255, 255);
-	font-size: 4rem;
+	top: 8rem;
+	color: rgb(238, 239, 238);
+	font-size: 3rem;
 	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	left: 3rem;
 }
 
-#particles-js{
-display:flex;
-width: 100%;
-height: 100vh;
-display: flex;
-justify-content: center;
-text-align: center;
-background-color: rgb(1, 1, 7);
-z-index: -1;
-}
+
 
 @media (max-width: 600px) {
 	.title{
@@ -42,8 +35,17 @@ z-index: -1;
 }
 
 @media (max-width: 600px) {
-	body{
-		display: flex;
-		font-size: 3rem;
+	p{	
+		font-size: 2rem;
+		position: absolute;
+		text-align: center;
+	}
 }
+
+@media (max-width: 600px) {
+	body{	
+		max-width: fit-content;
+		position: absolute;
+		text-align: center;
+	}
 }

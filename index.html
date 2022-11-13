@@ -17,8 +17,8 @@
 </head>
 <body id="body">
 
-	<h1 class="title" id="title">"Hi! I'm Pablo, front end developer"</h1>	
-	<p>"I'm a passionate for design and get into the people's perspective."s</p>
+	<h1 class="title" id="title">Hi! I'm Pablo, front end developer</h1>	
+	<p>I'm passionated for design and get into the people's perspectives.</p>
 	<br>
 	<br>
 	<script type="module"> 
@@ -36,6 +36,8 @@ const material = new THREE.MeshNormalMaterial();
 const mesh = new THREE.Mesh( geometry, material );
 scene.add( mesh );
 
+
+
 const renderer = new THREE.WebGLRenderer( { antialias: true } );
 renderer.setSize( window.innerWidth, window.innerHeight );
 renderer.setAnimationLoop( animation );
@@ -44,9 +46,9 @@ document.body.appendChild( renderer.domElement );
 
 
 // animation
-const geometryTwo = new THREE.TorusGeometry( 0.3, 0.1, 15, 200);
+const geometryTwo = new THREE.TorusGeometry( 0.3, 0.07, 15, 100);
 const materialOne = new THREE.MeshMatcapMaterial();
-const matcapTexture = new THREE.TextureLoader().load('data:image/jpeg;base64,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');
+const matcapTexture = new THREE.TextureLoader().load('https://devtalk.blender.org/uploads/default/original/1X/2c6f3c86cb1ae9108c1a344ed6d915c755bc6718.jpg');
 
 materialOne.matcap = matcapTexture;
 
@@ -54,21 +56,27 @@ const Torus= new THREE.Mesh( geometryTwo, materialOne);
 scene.add(Torus);
 
   mesh.position.x = -0.9;
-  Torus.position.x = 1;
+  Torus.position.x =-0.9;
+  mesh.position.y = -0.2;
+  Torus.position.y =-0.2;
+  
 
-const geometryThree = new THREE.SphereGeometry( 0.29, 1, 3);
-const materialThree = new THREE.MeshNormalMaterial();
+const geometryThree = new THREE.SphereGeometry( 0.25, 1, 2);
+const materialThree = new THREE.MeshMatcapMaterial();
+const matcapTextureOne = new THREE.TextureLoader().load('https://devtalk.blender.org/uploads/default/original/1X/429d84b0afc4949f6d271f72dddd99b4c7f75357.jpg');
 const sphere = new THREE.Mesh( geometryThree, materialThree );
 scene.add(sphere);
+materialThree.matcap = matcapTextureOne;
 
-
+sphere.position.x = 0.7;
+sphere.position.y =-0.2;
 
 function animation(time){
 
 mesh.rotation.x = time / 3000;
 mesh.rotation.y = time / 2000;
-Torus.rotation.x = time / 1550 + 0.2;
-Torus.rotation.y = time / 1950;
+Torus.rotation.x = time / 1050;
+Torus.rotation.y = time / 500;
 sphere.rotation.x = time / 2250;
 sphere.rotation.y = time / 2550;
 renderer.render( scene, camera );
