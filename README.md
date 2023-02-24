@@ -14,5 +14,5 @@
  * 3D Elements
  * Web GL
  * Scene, Animation, Core, Geometries 
- 
+ * *** 
 Todos los derechos reservados [Juan Pablo Jaramillo](https://github.com/HotSauce96)
