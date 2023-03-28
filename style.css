@@ -8,7 +8,7 @@ display: flex;font-family: 'Raleway', sans-serif;
 .title{
 	color: rgb(253, 253, 253);
 	margin: 2rem;
-	font-size: 3.4rem;
+	font-size: 3rem;
 	position: absolute;
 	font-weight: bolder;
 	font-family: 'Raleway', sans-serif;
@@ -17,8 +17,9 @@ display: flex;font-family: 'Raleway', sans-serif;
 
 h3{
 	color: rgb(253, 253, 253);
-	font-size: 2.4rem;
+	font-size: 2rem;
 	position: absolute;
+	margin-bottom: -3rem;	
 	font-style: italic;
 	font-weight: lighter;
 	bottom: 6rem;
@@ -32,7 +33,7 @@ p{	display: inline-block;
 	margin-top: 6rem;
 	top: 5rem;
 	color: rgb(238, 239, 238);
-	font-size: 2.4rem;
+	font-size: 2rem;
 	font-family: 'Raleway', sans-serif;
 	left: 8rem;
 }
