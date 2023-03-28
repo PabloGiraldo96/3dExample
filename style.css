@@ -1,33 +1,43 @@
 body{
 width: 90%;
 margin: 0;
-height: 100vh;
-display: flex;
-font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+height: 90vh;
+display: flex;font-family: 'Raleway', sans-serif;
 }
 
 .title{
 	color: rgb(253, 253, 253);
-	font-size: 4rem;
-	z-index: 1;
+	margin: 2rem;
+	font-size: 3.4rem;
 	position: absolute;
 	font-weight: bolder;
-	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-	left: 18rem;
+	font-family: 'Raleway', sans-serif;
+	left: 16rem;
 }
 
+h3{
+	color: rgb(253, 253, 253);
+	font-size: 2.4rem;
+	position: absolute;
+	font-style: italic;
+	font-weight: lighter;
+	bottom: 6rem;
+	font-family: 'Raleway', sans-serif;
+	left: 8rem;
+}
 
 
 p{	display: inline-block;
 	position: absolute;
-	top: 11rem;
+	margin-top: 6rem;
+	top: 5rem;
 	color: rgb(238, 239, 238);
-	font-size: 2rem;
-	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-	left: 20rem;
+	font-size: 2.4rem;
+	font-family: 'Raleway', sans-serif;
+	left: 8rem;
 }
 
-@media screen and (max-width: 800px) {
+@media (max-width: 767px) {
 	.title{
 		font-size: 4rem;
 		display: flex;
@@ -35,27 +45,37 @@ p{	display: inline-block;
 	}
 }
 
-@media screen and (max-width: 400px) {
+@media (max-width: 745px) {
 	.title{
 		font-size: 1rem;
 	}
 }
 
 
-@media screen and (max-width: 600px) {
+@media (max-width: 745px) {
 	p{
-		font-size: 1.5rem;
+		font-size: 15px;
 		position: absolute;
 		left: 18rem;
-		top: 18rem;
+		top: 7rem;
+	}
+}
+
+@media (max-width: 745px) {
+	h3{
+		font-size: 15px;
+		position: absolute;
+		left: 18rem;
+		top: 7rem;
 	}
 }
 
 
-@media screen and (max-width: 600px) {
-	body{
-	width: 100%;
-	height: 100vh;	
+@media screen and (max-width: 350px) {
+	body, canvas{
+	display:block;
+	width: 50%;
+	height: 50vh;	
 }
 }
 
