@@ -4,7 +4,7 @@
 
 **Also has a little function to change randomly the title color and apply a transition smoothly.**
 ## Screenshots
-![App Screenshot](https://scontent.feoh3-1.fna.fbcdn.net/v/t1.15752-9/329538222_498184195725706_7351740461234992805_n.png?_nc_cat=101&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeEsmrZ_LkBBnlw5x0F7g2IXgJwj8JiVXpCAnCPwmJVekP1Ui93Ic0lHTyGzGKxoc4iuXtJzLaQbfMklytAa7P7E&_nc_ohc=80azfwTO_owAX-fwblq&_nc_ht=scontent.feoh3-1.fna&oh=03_AdTu4c5-v5vLK69jholXXMR7s51VZiUBL-WF93UeIVNdTA&oe=641A2983)
+![App Screenshot](https://scontent-bog1-1.xx.fbcdn.net/v/t1.15752-9/329651357_593336882814351_2010586641348025709_n.png?_nc_cat=100&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeGGQx69wl5DIdvpcOMj6v81lOSDTYYM8GyU5INNhgzwbLi9B4ciShYtxRBFet2OEzwqfjnxX_BDZDxSfkZz9Jgx&_nc_ohc=6GH9YRrKHiQAX9kinN7&_nc_ht=scontent-bog1-1.xx&oh=03_AdRJuAHqHh8cdbKAk8M1dm7oBCa4pLsqaWYKS5ZrYx5B0Q&oe=644B8BD7)
 # Badges: 	
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
