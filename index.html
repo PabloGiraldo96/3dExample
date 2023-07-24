@@ -6,8 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Roboto:wght@300&display=swap" rel="stylesheet">
-	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Poppins:wght@300&display=swap" rel="stylesheet">
 	<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
 	<script type="importmap">
 		{
@@ -16,18 +15,15 @@
 			}
 		}
 	</script>
+	<title>3D Examples</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body id="body">
+<div class="canvas container" >
+<h1 class="title" id="title"> Geometry Shapes </h1>	
 
-	<h1 class="title" id="title">Hi! I'm Pablo, front end developer</h1>	
-	<p>I'm passionate for design, get into the people's perspectives and unlock those feelings when you see something incredible cool.</p>
-
-	<br>
-	<br>
-	<h3>Currently I'm getting deeper into the 3D design, understanding concepts as scene, cartesian planes, object shadows and objects profound in a determined space.</h3>
-	<script type="module"> 
-
+<script type="module"> 
 // Importing library
 
 import * as THREE from 'three';
@@ -58,7 +54,7 @@ window.addEventListener('resize', function(){
 
 // Creating elements // Box // Ring // Triangle // TorusKnot
 
-const geometry = new THREE.BoxGeometry( 0.2, 0.2, 0.2 );
+const geometry = new THREE.BoxGeometry( 0.4, 0.4, 0.4 );
 const material = new THREE.MeshMatcapMaterial();
 
 const matcapTextureTwo = new THREE.TextureLoader().load('data:image/jpeg;base64,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');
@@ -67,7 +63,7 @@ material.matcap = matcapTextureTwo;
 const mesh = new THREE.Mesh( geometry, material );
 scene.add( mesh );
 
-const geometryTwo = new THREE.TorusGeometry( 0.3, 0.06, 15, 200);
+const geometryTwo = new THREE.TorusGeometry( 0.4, 0.1, 15, 200);
 const materialTwo = new THREE.MeshMatcapMaterial();
 
 const matcapTexture = new THREE.TextureLoader().load('https://th.bing.com/th/id/OIP.4TjPhmJ7PZJPuFb1lho4UQHaHa?pid=ImgDet&rs=1');
@@ -76,7 +72,7 @@ materialTwo.matcap = matcapTexture;
 const Torus= new THREE.Mesh( geometryTwo, materialTwo);
 scene.add(Torus);
 
-const geometryThree = new THREE.SphereGeometry( 0.25, 11, 32);
+const geometryThree = new THREE.SphereGeometry( 0.5, 9, 36);
 const materialThree = new THREE.MeshMatcapMaterial();
 
 const matcapTextureOne = new THREE.TextureLoader().load('data:image/jpeg;base64,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');
@@ -85,7 +81,7 @@ const sphere = new THREE.Mesh( geometryThree, materialThree );
 scene.add(sphere);
 materialThree.matcap = matcapTextureOne;
 
-const geometryZero = new THREE.TorusKnotGeometry( 0.20, 0.09, 100, 32 );
+const geometryZero = new THREE.TorusKnotGeometry( 0.30, 0.14, 100, 32 );
 const materialZero= new THREE.MeshMatcapMaterial();
 
 const matcapTextureZero= new THREE.TextureLoader().load('https://th.bing.com/th/id/OIP.4TjPhmJ7PZJPuFb1lho4UQHaHa?pid=ImgDet&rs=1');
@@ -97,14 +93,14 @@ matcapTextureZero.matcap = matcapTextureZero;
 
 // Setting elements position 
 
-  mesh.position.x = -2.3;
+  mesh.position.x = -2;
   mesh.position.y = -0.3;
   Torus.position.y =-0.3;
-  sphere.position.x = 0.7;
+  sphere.position.x = 1.7;
   sphere.position.y =-0.3;
-  Torus.position.x = -2.3;
+  Torus.position.x = -2;
   TorusKnot.position.y = -0.3;
-  TorusKnot.position.x = -0.7;
+  TorusKnot.position.x = 0;
 
 // Animating elements to rotate
 
@@ -141,6 +137,9 @@ function title() {
 	title();
 
 	</script>
+</div>
+<h3>Little practice of 3D design, understanding concepts as scene, cartesian planes, object shadows and objects profound in a determined space.</h3>
 	<script src="/src/index.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
